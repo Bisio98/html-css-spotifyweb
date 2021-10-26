@@ -2,9 +2,138 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 body{
     font-family: 'Montserrat', sans-serif;
+}
+
+.white{
+    color: white;
+}
+
+/* FOOTER */
+footer{
+    height: 100px;
+    background-color: #282828;
+    display: flex;
+    color: gray;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer *{
+    margin: 10px;
+}
+
+/* LEFT */
+
+.playing{
+    display: flex;
+    align-items: center;
+}
+
+.playing img{
+    height: 50px;
+}
+
+.playing .song_info, .playing .song_fav{
+    display: inline-block;
+}
+
+.playing h6:hover{
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.playing .song_fav i:hover{
+    color: white;
+    cursor: pointer;
+}
+
+/* CENTER */
+.player .linear_complete{
+    display: inline-block;
+    width: 600px;
+}
+
+.player .top,.player .bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player .top i{
+   font-size: 20px;
+}
+
+.player .top .fa-play-circle{
+    font-size: 25px;
+}
+
+.player .top .fa-play-circle:hover{
+    font-size: 30px;
+}
+
+.player .circle{
+    left: 110px;
+}
+
+.player .time{
+    color: white;
+}
+
+/* RIGHT */
+.vol_ecc{
+    display: flex;
+    align-items: center;
+}
+
+.vol_ecc i:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.linear_complete{
+    position: relative;
+    margin: 0;
+    width: 150px;
+    height: 4px;
+    background-color: gray;
+    margin-right: 20px;
+    border-radius: 20px;
+}
+
+.linear_complete:hover{
+    cursor: pointer;
+}
+
+.linear_complete:hover .linear_selector{
+    background-color: lightgreen;
+}
+
+.linear_complete:hover .circle{
+    display: inline-block;
+}
+
+.linear_selector{
+    margin: 0;
+    width: 20%;
+    height: 4px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.circle{
+    display: none;
+    position: relative;
+    bottom: 12px;
+    left: 20px;
+    margin: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
 }
