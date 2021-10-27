@@ -2,15 +2,200 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
 }
 
 body{
     font-family: 'Montserrat', sans-serif;
+    color: gray;
+    height: 100vh;
+    width: 100%;
 }
 
 .white{
     color: white;
+}
+
+.bec_white:hover{
+    color: white;
+    cursor: pointer;
+}
+
+/* MAIN */
+
+
+main{
+    height: calc(100vh - 100px);
+}
+
+/* left nav */
+.left_nav{
+    float: left;
+    height:100%;
+    width: 300px;
+    background-color: black;
+    overflow: hidden;
+    font-weight: 700;
+}
+
+.container_nav{
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.left_nav .main_menu .hidden{
+    display: none;
+}
+
+.container_nav .main_menu ul li,.container_nav .pre_list,.container_nav .playlists h4,.container_nav .playlists .add_playlist,.container_nav .playlists .ov,.container_nav .user *{
+    margin-left: 20px;
+}
+
+.left_nav .green_choice{
+    margin-left: 0 !important;
+    border-left: 2px solid green;
+}
+
+.container_nav .pre_list{
+    margin-top: 20px;
+}
+
+.left_nav .main_menu .chosen{
+    margin-left: 18px;
+}
+
+.container_nav .playlists{
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.left_nav ul{
+    list-style: none;
+}
+
+.left_nav ul li{
+    margin-top: 20px;
+}
+
+.left_nav li .main_logo{
+    height: 50px;
+}
+
+.left_nav .main_command{
+    height: 30px;
+    vertical-align: middle;
+}
+
+.left_nav .add{
+    display: inline-block;
+    background-color: gray;
+    color: black;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.left_nav .playlists h4{
+    margin-top: 20px;
+}
+
+.left_nav .add_playlist:hover .add{
+    background-color: white;
+}
+
+.container_nav .user img{
+    height: 20px;
+}
+
+.container_nav .line{
+    height: 2px;
+    background-color: gray;
+    width: 90%;
+    margin: 10px auto 10px;
+}
+
+.container_nav .user img{
+    vertical-align: middle;
+}
+
+.container_nav .user .bec_white{
+    font-size: 12px;
+}
+
+.container_nav .user .pic{
+    height: 30px;
+    background-color: gray;
+    border-radius: 50%;
+    width: 30px;
+}
+
+.left_nav .user{
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:600px) {
+    .left_nav span{
+        display: none;
+    }
+
+    .left_nav .pre_list,.left_nav .playlists{
+        display: none;
+    }
+
+    .left_nav{
+        width: 80px;
+    }
+
+    .container_nav{
+        justify-content: space-between;
+    }
+
+    .container_nav .main_menu .main_logo{
+        display: none;
+    }
+
+    .container_nav .main_menu .hidden{
+        display: inline-block;
+        height: 30px;
+    }
+
+    .container_nav .line{
+        display: none;
+    }
+}
+
+/* main page */
+
+
+
+.main_page{
+    float: right;
+    height: 100%;
+    overflow-y: auto;
+    width: calc(100% - 300px);
+}
+
+.ad{
+    width: calc(100% - 300px);
+    height: 100px;
+    position: fixed;
+    background-color:rgba(0, 0, 0, 0.5);
+    text-align: right;
+}
+
+.ad a{
+    line-height: 100px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.ad a:hover{
+    font-size: 20px;
+    padding: 15px 25px;
+    border-radius: 30px;
 }
 
 /* FOOTER */
@@ -24,7 +209,7 @@ footer{
 }
 
 footer *{
-    margin: 10px;
+    margin: 5px;
 }
 
 /* LEFT */
@@ -43,20 +228,13 @@ footer *{
 }
 
 .playing h6:hover{
-    color: white;
     text-decoration: underline;
-    cursor: pointer;
-}
-
-.playing .song_fav i:hover{
-    color: white;
-    cursor: pointer;
 }
 
 /* CENTER */
 .player .linear_complete{
     display: inline-block;
-    width: 600px;
+    width: 30vw;
 }
 
 .player .top,.player .bottom{
@@ -70,15 +248,15 @@ footer *{
 }
 
 .player .top .fa-play-circle{
-    font-size: 25px;
-}
-
-.player .top .fa-play-circle:hover{
     font-size: 30px;
 }
 
+.player .top .fa-play-circle:hover{
+    transform: scale(1.5);
+}
+
 .player .circle{
-    left: 110px;
+    left: 20%;
 }
 
 .player .time{
@@ -99,7 +277,7 @@ footer *{
 .linear_complete{
     position: relative;
     margin: 0;
-    width: 150px;
+    width: 10vw;
     height: 4px;
     background-color: gray;
     margin-right: 20px;
@@ -130,10 +308,38 @@ footer *{
     display: none;
     position: relative;
     bottom: 12px;
-    left: 20px;
+    left: 20%;
     margin: 0;
     height: 20px;
     width: 20px;
     border-radius: 50%;
     background-color: white;
+}
+
+@media screen and (max-width: 700px) {
+    .vol_ecc .linear_complete{
+        width: 5vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .player .linear_complete{
+        width:10vw;
+    }
+
+    footer{
+        font-size: 10px;
+    }
+
+    .player .top i{
+        font-size: 10px;
+    }
+
+    .player .top .fa-play-circle{
+        font-size: 15px;
+    }
+
+    footer *{
+        margin: 2px;
+    }
 }
