@@ -25,6 +25,7 @@ body{
 
 main{
     height: calc(100vh - 100px);
+    font-weight: 700;
 }
 
 /* left nav */
@@ -34,7 +35,6 @@ main{
     width: 300px;
     background-color: black;
     overflow: hidden;
-    font-weight: 700;
 }
 
 .container_nav{
@@ -54,7 +54,7 @@ main{
 
 .left_nav .green_choice{
     margin-left: 0 !important;
-    border-left: 2px solid green;
+    border-left: 2px solid greenyellow;
 }
 
 .container_nav .pre_list{
@@ -174,6 +174,7 @@ main{
     height: 100%;
     overflow-y: auto;
     width: calc(100% - 300px);
+    background-color: #141922;
 }
 
 .ad{
@@ -198,6 +199,112 @@ main{
     font-size: 20px;
     padding: 15px 25px;
     border-radius: 30px;
+}
+.main_page .nav{
+    padding-top: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.main_page .nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px 0;
+}
+
+.under_line{
+    margin: auto;
+    width: 50px; 
+    height: 2px;
+    background-color: greenyellow;       
+}
+
+.recent,.for_you,.artists{
+    padding-left: 20px;
+}
+
+.recent h3,.for_you h3,.artists h3{
+    margin-top: 50px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.content{
+    display: flex;
+}
+
+.box h5,.box h6{
+    margin:20px 0 10px;
+}
+
+.box img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.box{
+    width: calc(100% / 7);
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.img_box{
+    position: relative;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.img_box:hover .overlay{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.img_box:hover img{
+    filter: opacity(0.3);
+}
+
+.img_box i{
+    font-size: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box h5{
+    font-size: 18px;
+}
+
+.box h6{
+    font-size: 14px;
+}
+
+.box h5,.box h6{
+    text-align: center;
+}
+
+.for_you span,.artists span{
+    display: inline-block;
+    padding-bottom: 30px;
+}
+
+.artists .img_box{
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 @media screen and (max-width:600px) {
